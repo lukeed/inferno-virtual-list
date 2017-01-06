@@ -6,6 +6,10 @@
   "main": "dist/inferno-virtual-list.js",
   "minified:main": "dist/inferno-virtual-list.min.js",
   "jsnext:main": "src/index.js",
+  "files": [
+    "dist",
+    "src"
+  ],
   "author": {
     "name": "Luke Edwards",
     "email": "luke.edwards05@gmail.com",
