@@ -55,7 +55,7 @@ export default class extends Component {
 		const end = start + 1 + visibles;
 
 		// slice what's currently in viewport ++ buffer count
-		const selection = props.data.slice(start, end);
+		const selection = (props.data || []).slice(start, end);
 
 		return (
 			<div id={props.id} ref={this.setRef} className={props.className} onScroll={this.handleScroll}>
