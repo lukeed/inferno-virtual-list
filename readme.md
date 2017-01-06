@@ -151,7 +151,7 @@ Inferno.render(Demo, DIV);
 
 ## Credit
 
-Major hat tip to [@_developit](https://twitter.com/_developit) and his work on [`preact-virtual-list`](https://github.com/developit/preact-virtual-list), from which this module was ported.
+:tophat: Major hat tip to [@_developit](https://twitter.com/_developit) and his work on [`preact-virtual-list`](https://github.com/developit/preact-virtual-list), from which this module was ported.
 
 ## License
 
