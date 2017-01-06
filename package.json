@@ -1,6 +1,7 @@
 {
   "version": "0.0.0",
   "name": "inferno-virtual-list",
+  "repository": "lukeed/inferno-virtual-list",
   "description": "Virtual List that only renders visible items. Supports millions of rows. Recycles efficiently via Inferno JS.",
   "main": "dist/inferno-virtual-list.js",
   "minified:main": "dist/inferno-virtual-list.min.js",
