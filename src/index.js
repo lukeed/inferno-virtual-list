@@ -4,6 +4,8 @@ import Component from 'inferno-component';
 const STYLE_INNER = 'position:relative; overflow:hidden; width:100%; min-height:100%;';
 const STYLE_CONTENT = 'position:absolute; top:0; left:0; height:100%; width:100%; overflow:visible;';
 
+const vn = Inferno.createVNode;
+
 export default class extends Component {
 	constructor() {
 		super();
@@ -57,14 +59,12 @@ export default class extends Component {
 		// slice what's currently in viewport ++ buffer count
 		const selection = (props.data || []).slice(start, end);
 
-		return (
-			<div id={props.id} ref={this.setRef} className={props.className} onScroll={this.handleScroll}>
-				<div style={`${STYLE_INNER} height:${props.data.length * props.rowHeight}px;`}>
-					<div style={`${STYLE_CONTENT} top:${start * props.rowHeight}px;`}>
-						{ selection.map(props.rowRender) }
-					</div>
-				</div>
-			</div>
-		);
+		return vn(2, 'div', {id: props.id, className: props.className}, (
+			vn(2, 'div', {style: `${STYLE_INNER} height:${props.data.length * props.rowHeight}px;`},
+				vn(2, 'div', {style: `${STYLE_CONTENT} top:${start * props.rowHeight}px;`},
+					selection.map(props.rowRender)
+				)
+			)
+		), {onScroll: this.handleScroll}, null, this.setRef);
 	}
 }
