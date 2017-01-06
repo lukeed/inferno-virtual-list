@@ -1,9 +1,8 @@
 const babel = require('rollup-plugin-babel');
-const uglify = require('rollup-plugin-uglify');
-const replace = require('rollup-plugin-replace');
-// const cUglify = require('./uglify');
-const cBabel = require('./babel');
 
+/**
+ * Rollup Config: `build`
+ */
 module.exports = {
 	format: 'umd',
 	moduleName: 'VirtualList',
@@ -18,10 +17,9 @@ module.exports = {
 		'inferno-component': 'Inferno.Component'
 	},
 	plugins: [
-		babel(cBabel),
-		// uglify(cUglify),
-		replace({
-			'process.env.NODE_ENV': JSON.stringify('production')
+		babel({
+			presets: [['es2015', {loose: true, modules: false}]],
+			plugins: ['inferno']
 		})
 	]
 };
