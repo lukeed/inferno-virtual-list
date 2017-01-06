@@ -58,7 +58,7 @@ export default class extends Component {
 		const selection = props.data.slice(start, end);
 
 		return (
-			<div ref={this.setRef} className={props.className} onScroll={this.handleScroll}>
+			<div id={props.id} ref={this.setRef} className={props.className} onScroll={this.handleScroll}>
 				<div style={`${STYLE_INNER} height:${props.data.length * props.rowHeight}px;`}>
 					<div style={`${STYLE_CONTENT} top:${start * props.rowHeight}px;`}>
 						{ selection.map(props.rowRender) }
