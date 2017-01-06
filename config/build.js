@@ -1,4 +1,4 @@
-const babel = require('rollup-plugin-babel');
+const buble = require('rollup-plugin-buble');
 
 /**
  * Rollup Config: `build`
@@ -17,9 +17,8 @@ module.exports = {
 		'inferno-component': 'Inferno.Component'
 	},
 	plugins: [
-		babel({
-			presets: [['es2015', {loose: true, modules: false}]],
-			plugins: ['inferno']
+		buble({
+			transforms: {modules: false}
 		})
 	]
 };
