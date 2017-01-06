@@ -4,9 +4,9 @@
 
 This is a simple component that allows you to create very long, scrollable lists that perform extremely fast. It allows a configurable [buffer zone](#buffer) to render items above and below the visible viewport bounds.
 
-#### [Demo](https://jsfiddle.net/developit/qqan9pdo/)
+#### [Demo](https://jsfiddle.net/lukeed/vtkdyjva/)
 
-<a href="https://jsfiddle.net/developit/qqan9pdo/">
+<a href="https://jsfiddle.net/lukeed/vtkdyjva/">
   <img alt="preview" src="https://i.gyazo.com/866e97be9075dd63260dbc5df30075ec.gif" width="420">
 </a>
 
@@ -100,7 +100,7 @@ for (let x=1e5; x--; ) DATA[x] = `Item #${x+1}`;
 
 ### Functional
 
-[**View this example on JSFiddle**](https://jsfiddle.net/developit/qqan9pdo/)
+[**View this example on JSFiddle**](https://jsfiddle.net/lukeed/vtkdyjva/)
 
 ```js
 import Inferno from 'inferno';
@@ -112,13 +112,13 @@ const Row = row => (
 );
 
 Inferno.render((
-  <List data={DATA} rowHeight={30} rowRender={Row} />
+  <List className="list" data={DATA} rowHeight={30} rowRender={Row} />
 ), DIV);
 ```
 
 ### Stateful
 
-[**View this example on JSFiddle**](https://jsfiddle.net/developit/qqan9pdo/)
+[**View this example on JSFiddle**](https://jsfiddle.net/lukeed/k7w5okk4/)
 
 ```js
 import Inferno from 'inferno';
@@ -146,7 +146,7 @@ class Demo extends Component {
   }
 }
 
-Inferno.render(Demo, DIV);
+Inferno.render(<Demo />, DIV);
 ```
 
 ## Credit
