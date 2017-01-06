@@ -11,7 +11,8 @@
     "url": "https://lukeed.com"
   },
   "scripts": {
-    "build": "rollup -c config/build.js"
+    "build": "rollup -c config/build.js",
+    "postbuild": "rollup -c config/minify.js"
   },
   "license": "MIT",
   "devDependencies": {
